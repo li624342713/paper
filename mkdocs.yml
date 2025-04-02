@@ -1,5 +1,7 @@
 # 标题
 site_name: 学习笔记
+site_url: https://li624342713.github.io/paper/  # 必须与实际部署的完整路径一致
+use_directory_urls: true  # 默认为 true，影响页面路径生成方式
 
 # 索引
 nav:
