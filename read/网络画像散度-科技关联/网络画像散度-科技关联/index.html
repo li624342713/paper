@@ -1,0 +1,1565 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../%E7%A7%91%E6%8A%80%E5%B1%82%E7%BA%A7%E8%81%94%E7%B3%BB%E7%9A%84%E7%BD%91%E7%BB%9C%E8%80%A6%E5%90%88%E6%96%B9%E6%B3%95/%E7%A7%91%E6%8A%80%E5%B1%82%E7%BA%A7%E8%81%94%E7%B3%BB%E7%9A%84%E7%BD%91%E7%BB%9C%E8%80%A6%E5%90%88%E6%96%B9%E6%B3%95/">
+      
+      
+        <link rel="next" href="../../%E7%A7%91%E6%8A%80%E5%AE%89%E5%85%A8-%E6%96%B0%E5%85%B4%E6%8A%80%E6%9C%AF/%E7%A7%91%E6%8A%80%E5%AE%89%E5%85%A8-%E6%96%B0%E5%85%B4%E6%8A%80%E6%9C%AF/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+    
+    
+      
+        <title>5. 网络画像散度-科技关联 - 学习笔记</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="学习笔记" class="md-header__button md-logo" aria-label="学习笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            学习笔记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              5. 网络画像散度-科技关联
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../%E8%8D%AF%E7%89%A9%E4%B8%BB%E9%A2%98%E6%BC%94%E5%8C%96%E7%A0%94%E7%A9%B6/%E8%8D%AF%E7%89%A9%E4%B8%BB%E9%A2%98%E6%BC%94%E5%8C%96%E7%A0%94%E7%A9%B6/" class="md-tabs__link">
+          
+  
+  论文阅读笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="学习笔记" class="md-nav__button md-logo" aria-label="学习笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    学习笔记
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    论文阅读笔记
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            论文阅读笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%8D%AF%E7%89%A9%E4%B8%BB%E9%A2%98%E6%BC%94%E5%8C%96%E7%A0%94%E7%A9%B6/%E8%8D%AF%E7%89%A9%E4%B8%BB%E9%A2%98%E6%BC%94%E5%8C%96%E7%A0%94%E7%A9%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    药物主题演化研究
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%9F%A5%E8%AF%86%E7%BD%91%E7%BB%9C%E8%80%A6%E5%90%88-%E7%A7%91%E6%8A%80%E5%85%B3%E8%81%94/%E7%9F%A5%E8%AF%86%E7%BD%91%E7%BB%9C%E8%80%A6%E5%90%88-%E7%A7%91%E6%8A%80%E5%85%B3%E8%81%94/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 知识网络耦合-科技关联
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%8A%80%E6%9C%AF%E6%9C%BA%E4%BC%9A%E8%AF%86%E5%88%AB/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%8A%80%E6%9C%AF%E6%9C%BA%E4%BC%9A%E8%AF%86%E5%88%AB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 机器学习-技术机会识别
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%B1%82%E6%AC%A1%E7%9F%A5%E8%AF%86%E6%95%B4%E5%90%88/%E5%B1%82%E6%AC%A1%E7%9F%A5%E8%AF%86%E6%95%B4%E5%90%88/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 层次知识整合
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%A7%91%E6%8A%80%E5%B1%82%E7%BA%A7%E8%81%94%E7%B3%BB%E7%9A%84%E7%BD%91%E7%BB%9C%E8%80%A6%E5%90%88%E6%96%B9%E6%B3%95/%E7%A7%91%E6%8A%80%E5%B1%82%E7%BA%A7%E8%81%94%E7%B3%BB%E7%9A%84%E7%BD%91%E7%BB%9C%E8%80%A6%E5%90%88%E6%96%B9%E6%B3%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 科技层级联系的网络耦合方法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    5. 网络画像散度-科技关联
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%A7%91%E6%8A%80%E5%AE%89%E5%85%A8-%E6%96%B0%E5%85%B4%E6%8A%80%E6%9C%AF/%E7%A7%91%E6%8A%80%E5%AE%89%E5%85%A8-%E6%96%B0%E5%85%B4%E6%8A%80%E6%9C%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 科技安全-新兴技术
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%A7%91%E6%8A%80%E5%85%B3%E8%81%94/%E7%A7%91%E6%8A%80%E5%85%B3%E8%81%94/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 科技关联
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%A7%91%E6%8A%80%E4%BA%A7%E5%88%9B%E6%96%B0%E9%A9%B1%E5%8A%A8%E5%85%B3%E7%B3%BB/%E7%A7%91%E6%8A%80%E4%BA%A7%E5%88%9B%E6%96%B0%E9%A9%B1%E5%8A%A8%E5%85%B3%E7%B3%BB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 科技产创新驱动关系
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%A6%81%E7%B4%A0%E4%BE%9D%E8%B5%96%E6%80%A7%E4%B8%8E%E7%BB%93%E6%9E%84%E5%BC%82%E8%B4%A8%E6%80%A7/%E8%A6%81%E7%B4%A0%E4%BE%9D%E8%B5%96%E6%80%A7%E4%B8%8E%E7%BB%93%E6%9E%84%E5%BC%82%E8%B4%A8%E6%80%A7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 要素依赖性与结构异质性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AA%81%E7%A0%B4%E6%80%A7%E6%97%A9%E6%9C%9F%E8%AF%86%E5%88%AB/%E7%AA%81%E7%A0%B4%E6%80%A7%E6%97%A9%E6%9C%9F%E8%AF%86%E5%88%AB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.突破性早期识别
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%89%8D%E4%BA%A7%E4%B8%9A%E8%9E%8D%E5%90%88/%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%89%8D%E4%BA%A7%E4%B8%9A%E8%9E%8D%E5%90%88/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11.技术与前产业融合
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%BA%E4%BC%9A%E8%AF%84%E4%BB%B7%E4%B8%8E%E4%BC%98%E5%8C%96/%E6%9C%BA%E4%BC%9A%E8%AF%84%E4%BB%B7%E4%B8%8E%E4%BC%98%E5%8C%96/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12.机会评价与优化
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F-%E6%8A%80%E6%9C%AF%E6%9C%BA%E4%BC%9A/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F-%E6%8A%80%E6%9C%AF%E6%9C%BA%E4%BC%9A/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13.生命周期-技术机会
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%A0%86%E5%8F%A0%E9%99%8D%E5%99%AA%E8%87%AA%E7%BC%96%E7%A0%81%E5%99%A8%28%20Sdae%20%29%E6%8A%80%E6%9C%AF%E7%BB%84%E5%90%88/%E5%A0%86%E5%8F%A0%E9%99%8D%E5%99%AA%E8%87%AA%E7%BC%96%E7%A0%81%E5%99%A8%28%20Sdae%20%29%E6%8A%80%E6%9C%AF%E7%BB%84%E5%90%88/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14.堆叠降噪自编码器( Sdae )技术组合
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0-%E6%8A%80%E6%9C%AF%E4%B8%BB%E9%A2%98-%E6%8A%80%E6%9C%AF%E8%9E%8D%E5%90%88/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0-%E6%8A%80%E6%9C%AF%E4%B8%BB%E9%A2%98-%E6%8A%80%E6%9C%AF%E8%9E%8D%E5%90%88/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15.监督学习-技术主题-技术融合
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%9B%B8%E4%BC%BC%E6%80%A7%E5%BA%A6%E9%87%8F/%E7%9B%B8%E4%BC%BC%E6%80%A7%E5%BA%A6%E9%87%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16.相似性度量
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8A%9F%E8%83%BD%E8%AF%AD%E4%B9%89%E7%9F%A5%E8%AF%86%E5%A2%9E%E5%BC%BA%E6%96%87%E6%9C%AC%E7%9B%B8%E4%BC%BC%E5%BA%A6/%E5%8A%9F%E8%83%BD%E8%AF%AD%E4%B9%89%E7%9F%A5%E8%AF%86%E5%A2%9E%E5%BC%BA%E6%96%87%E6%9C%AC%E7%9B%B8%E4%BC%BC%E5%BA%A6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.功能语义知识增强文本相似度
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%93%BE%E6%8E%A5%E9%A2%84%E6%B5%8B%E5%92%8C%E7%A4%BE%E5%8C%BA%E5%8F%91%E7%8E%B0%E8%BF%9B%E8%A1%8C%E6%8A%80%E6%9C%AF%E8%9E%8D%E5%90%88%E9%A2%84%E6%B5%8B/%E9%93%BE%E6%8E%A5%E9%A2%84%E6%B5%8B%E5%92%8C%E7%A4%BE%E5%8C%BA%E5%8F%91%E7%8E%B0%E8%BF%9B%E8%A1%8C%E6%8A%80%E6%9C%AF%E8%9E%8D%E5%90%88%E9%A2%84%E6%B5%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18.链接预测和社区发现进行技术融合预测
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%93%BE%E6%8E%A5%E9%A2%84%E6%B5%8B/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%93%BE%E6%8E%A5%E9%A2%84%E6%B5%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19.机器学习链接预测
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%8A%80%E6%9C%AF%E8%9E%8D%E5%90%88/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%8A%80%E6%9C%AF%E8%9E%8D%E5%90%88/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.机器学习技术融合
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%80%E6%9C%AF%E8%9E%8D%E5%90%88%E9%A2%84%E6%B5%8B%E5%88%9B%E6%96%B0%E6%9C%BA%E4%BC%9A/%E6%8A%80%E6%9C%AF%E8%9E%8D%E5%90%88%E9%A2%84%E6%B5%8B%E5%88%9B%E6%96%B0%E6%9C%BA%E4%BC%9A/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21.技术融合预测创新机会
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9B%BE%E5%8D%B7%E7%A7%AF%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%E6%9C%BA%E4%BC%9A%E8%AF%86%E5%88%AB/%E5%9B%BE%E5%8D%B7%E7%A7%AF%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%E6%9C%BA%E4%BC%9A%E8%AF%86%E5%88%AB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.图卷积网络技术机会识别
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%9F%A5%E8%AF%86%E8%81%94%E7%B3%BB%E5%BD%B1%E5%93%8D%E4%BC%81%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%88%9B%E6%96%B0/%E7%9F%A5%E8%AF%86%E8%81%94%E7%B3%BB%E5%BD%B1%E5%93%8D%E4%BC%81%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%88%9B%E6%96%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23.知识联系影响企业技术创新
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0%E7%9A%84%E9%A2%A0%E8%A6%86%E6%80%A7%E6%8A%80%E6%9C%AF%E6%97%A9%E6%9C%9F%E8%AF%86%E5%88%AB/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0%E7%9A%84%E9%A2%A0%E8%A6%86%E6%80%A7%E6%8A%80%E6%9C%AF%E6%97%A9%E6%9C%9F%E8%AF%86%E5%88%AB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    24.集成学习的颠覆性技术早期识别
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%9F%A5%E8%AF%86%E7%BD%91%E7%BB%9C%E4%B8%8E%E9%93%BE%E8%B7%AF%E9%A2%84%E6%B5%8B/%E7%9F%A5%E8%AF%86%E7%BD%91%E7%BB%9C%E4%B8%8E%E9%93%BE%E8%B7%AF%E9%A2%84%E6%B5%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    25.知识网络与链路预测
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%80%E6%9C%AF%E5%8F%91%E5%B1%95%E8%B6%8B%E5%8A%BF%E9%A2%84%E6%B5%8B/%E6%8A%80%E6%9C%AF%E5%8F%91%E5%B1%95%E8%B6%8B%E5%8A%BF%E9%A2%84%E6%B5%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    26.技术发展趋势预测
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TO-RFM%20%E6%A8%A1%E5%9E%8B/TO-RFM%20%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    27.TO-RFM 模型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%81%9A%E7%B1%BB%E4%B8%8E%E5%A4%9A%E7%BB%B4%E7%A9%BA%E9%97%B4/%E8%81%9A%E7%B1%BB%E4%B8%8E%E5%A4%9A%E7%BB%B4%E7%A9%BA%E9%97%B4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    28.聚类与多维空间
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%BB%E9%A2%98%E6%8C%96%E6%8E%98%E4%B8%8E%E4%B8%93%E5%88%A9%E8%AF%84%E4%BC%B0/%E4%B8%BB%E9%A2%98%E6%8C%96%E6%8E%98%E4%B8%8E%E4%B8%93%E5%88%A9%E8%AF%84%E4%BC%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    29.主题挖掘与专利评估
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%B3%E9%94%AE%E5%85%B1%E6%80%A7%E6%8A%80%E6%9C%AF%E8%AF%86%E5%88%AB/%E5%85%B3%E9%94%AE%E5%85%B1%E6%80%A7%E6%8A%80%E6%9C%AF%E8%AF%86%E5%88%AB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    30.关键共性技术识别
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%A6%BB%E7%BE%A4%E4%B8%93%E5%88%A9%E6%96%B0%E5%85%B4%E6%8A%80%E6%9C%AF%E8%AF%86%E5%88%AB/%E7%A6%BB%E7%BE%A4%E4%B8%93%E5%88%A9%E6%96%B0%E5%85%B4%E6%8A%80%E6%9C%AF%E8%AF%86%E5%88%AB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    31.离群专利新兴技术识别
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%80%E6%9C%AF%E7%9F%A5%E8%AF%86%E6%B5%81%E5%8A%A8%E9%A2%84%E6%B5%8B/%E6%8A%80%E6%9C%AF%E7%9F%A5%E8%AF%86%E6%B5%81%E5%8A%A8%E9%A2%84%E6%B5%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    32.技术知识流动预测
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%9F%A5%E8%AF%86%E8%B7%83%E8%BF%81%E8%B7%AF%E5%BE%84/%E7%9F%A5%E8%AF%86%E8%B7%83%E8%BF%81%E8%B7%AF%E5%BE%84/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    33.知识跃迁路径
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%BD%9C%E5%9C%A8%E6%8A%80%E6%9C%AF%E6%9C%BA%E4%BC%9A/%E6%BD%9C%E5%9C%A8%E6%8A%80%E6%9C%AF%E6%9C%BA%E4%BC%9A/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    34.潜在技术机会
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%BB%E9%A2%98%E6%A8%A1%E5%9E%8B%E9%A2%84%E6%B5%8B%E6%96%B0%E5%85%B4%E6%8A%80%E6%9C%AF/%E4%B8%BB%E9%A2%98%E6%A8%A1%E5%9E%8B%E9%A2%84%E6%B5%8B%E6%96%B0%E5%85%B4%E6%8A%80%E6%9C%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    35.主题模型预测新兴技术
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%A7%91%E6%8A%80%E5%85%B3%E8%81%94%E6%BC%94%E5%8C%96%E5%88%86%E6%9E%90/%E7%A7%91%E6%8A%80%E5%85%B3%E8%81%94%E6%BC%94%E5%8C%96%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    36.科技关联演化分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%93%BE%E6%8E%A5%E9%A2%84%E6%B5%8B%E6%9C%BA%E4%BC%9A%E8%AF%86%E5%88%AB/%E9%93%BE%E6%8E%A5%E9%A2%84%E6%B5%8B%E6%9C%BA%E4%BC%9A%E8%AF%86%E5%88%AB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    37.链接预测机会识别
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%BF%87%E6%9C%9F%E4%B8%93%E5%88%A9%E4%B8%AD%E6%8A%80%E6%9C%AF%E6%9C%BA%E4%BC%9A/%E8%BF%87%E6%9C%9F%E4%B8%93%E5%88%A9%E4%B8%AD%E6%8A%80%E6%9C%AF%E6%9C%BA%E4%BC%9A/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    38.过期专利中技术机会
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%A4%9A%E6%8A%80%E6%9C%AF%E8%9E%8D%E5%90%88/%E5%A4%9A%E6%8A%80%E6%9C%AF%E8%9E%8D%E5%90%88/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    39.多技术融合
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%BB%93%E5%90%88%E6%8A%80%E6%9C%AF%E8%B7%AF%E7%BA%BF%E5%9B%BE/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%BB%93%E5%90%88%E6%8A%80%E6%9C%AF%E8%B7%AF%E7%BA%BF%E5%9B%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    40.机器学习结合技术路线图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%BB%E9%A2%98%E5%BB%BA%E6%A8%A1%E5%92%8CSAO%E8%AF%AD%E4%B9%89%E5%88%86%E6%9E%90/%E4%B8%BB%E9%A2%98%E5%BB%BA%E6%A8%A1%E5%92%8CSAO%E8%AF%AD%E4%B9%89%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    41.主题建模和SAO语义分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%96%87%E6%9C%AC%E6%8C%96%E6%8E%98%E5%92%8CF%E9%A1%B9%E5%88%86%E6%9E%90/%E6%96%87%E6%9C%AC%E6%8C%96%E6%8E%98%E5%92%8CF%E9%A1%B9%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    42.文本挖掘和F项分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%96%B0%E5%85%B4%E6%8A%80%E6%9C%AF%E7%9A%84%E6%97%A9%E6%9C%9F%E8%AF%86%E5%88%AB/%E6%96%B0%E5%85%B4%E6%8A%80%E6%9C%AF%E7%9A%84%E6%97%A9%E6%9C%9F%E8%AF%86%E5%88%AB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    43.新兴技术的早期识别
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%A7%91%E6%8A%80%E4%BA%92%E5%8A%A8/%E7%A7%91%E6%8A%80%E4%BA%92%E5%8A%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    44.科技互动
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%A7%91%E6%8A%80%E5%B7%AE%E8%B7%9D/%E7%A7%91%E6%8A%80%E5%B7%AE%E8%B7%9D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    45.科技差距
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%94%9F%E6%88%90%E5%BC%8F%E5%9C%B0%E5%BD%A2%E5%9B%BE%E7%BB%98%E5%88%B6%E5%92%8C%E9%93%BE%E6%8E%A5%E9%A2%84%E6%B5%8B/%E7%94%9F%E6%88%90%E5%BC%8F%E5%9C%B0%E5%BD%A2%E5%9B%BE%E7%BB%98%E5%88%B6%E5%92%8C%E9%93%BE%E6%8E%A5%E9%A2%84%E6%B5%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    46.生成式地形图绘制和链接预测
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%BA%E6%96%87%E4%B8%8E%E4%B8%93%E5%88%A9%E4%B9%8B%E9%97%B4%E7%9A%84%E6%96%87%E6%9C%AC%E7%9B%B8%E4%BC%BC%E5%BA%A6/%E8%AE%BA%E6%96%87%E4%B8%8E%E4%B8%93%E5%88%A9%E4%B9%8B%E9%97%B4%E7%9A%84%E6%96%87%E6%9C%AC%E7%9B%B8%E4%BC%BC%E5%BA%A6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    47.论文与专利之间的文本相似度
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%80%E6%9C%AF%E8%B6%8B%E5%8A%BF%E9%A2%84%E6%B5%8B%E7%A7%91%E6%8A%80%E5%B7%AE%E8%B7%9D/%E6%8A%80%E6%9C%AF%E8%B6%8B%E5%8A%BF%E9%A2%84%E6%B5%8B%E7%A7%91%E6%8A%80%E5%B7%AE%E8%B7%9D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    48.技术趋势预测科技差距
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BERT%E6%A8%A1%E5%9E%8B%E5%92%8C%E8%AF%AD%E4%B9%89%E5%88%86%E6%9E%90/BERT%E6%A8%A1%E5%9E%8B%E5%92%8C%E8%AF%AD%E4%B9%89%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    49.BERT模型和语义分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%A7%91%E6%8A%80%E4%B8%AD%E5%85%B3%E8%81%94%E4%B8%BB%E9%A2%98/%E7%A7%91%E6%8A%80%E4%B8%AD%E5%85%B3%E8%81%94%E4%B8%BB%E9%A2%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    50.科技中关联主题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B5%84%E9%87%91-%E7%A7%91%E5%AD%A6-%E6%8A%80%E6%9C%AF-%E5%88%9B%E6%96%B0%E5%85%B3%E8%81%94%E5%88%86%E6%9E%90/%E8%B5%84%E9%87%91-%E7%A7%91%E5%AD%A6-%E6%8A%80%E6%9C%AF-%E5%88%9B%E6%96%B0%E5%85%B3%E8%81%94%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    51.资金-科学-技术-创新关联分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%80%E6%9C%AF%E5%85%B3%E9%94%AE%E8%AF%8D%E5%88%86%E6%9E%90/%E6%8A%80%E6%9C%AF%E5%85%B3%E9%94%AE%E8%AF%8D%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    52.技术关键词分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B4%E5%90%88%E4%B8%93%E5%88%A9-%E4%BA%A7%E5%93%81%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B4%E5%90%88%E4%B8%93%E5%88%A9-%E4%BA%A7%E5%93%81%E6%95%B0%E6%8D%AE%E5%BA%93/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    53.整合专利-产品数据库
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8A%A8%E6%80%81%E4%BB%B7%E5%80%BC%E4%B8%8E%E5%A4%9A%E5%B1%82%E7%BD%91%E7%BB%9C/%E5%8A%A8%E6%80%81%E4%BB%B7%E5%80%BC%E4%B8%8E%E5%A4%9A%E5%B1%82%E7%BD%91%E7%BB%9C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    54.动态价值与多层网络
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%BD%9C%E5%9C%A8%E5%BD%B1%E5%93%8D%E5%8A%9B%E9%A2%84%E6%B5%8B/%E6%BD%9C%E5%9C%A8%E5%BD%B1%E5%93%8D%E5%8A%9B%E9%A2%84%E6%B5%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    55.潜在影响力预测
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>5. 网络画像散度-科技关联</h1>
+
+<p>Unveiling intrinsic interactions of science and technology in artificial intelligence using a network portrait divergence approach</p>
+<p>Journal of Informetrics 19 (2025) 101630</p>
+<p>基于网络画像散度的人工智能科学与技术内在互动揭示</p>
+<p>巴志超</p>
+<p><a href="../Meng%20%E7%AD%89%20-%202025%20-%20Unveiling%20intrinsic%20interactions%20of%20science%20and%20technology%20in%20artificial%20intelligence%20using%20a%20networ.pdf">pdf</a>  </p>
+<p><strong>意义：</strong>  </p>
+<p>网络画像生成：将时序科技知识网络编码为二维画像——
+节点画像：捕获节点度分布异质性
+连边权重画像：映射知识组合强度分布
+散度度量创新：基于信息论的网络画像散度（Bagrow和Bollt，2019），突破传统网络比较对节点共享假设的依赖；
+动态交互解析：通过多尺度主干网络分析，揭示科技系统内部知识流动路径与跨域交互时变规律。</p>
+<p><strong>研究问题：</strong> </p>
+<p>现有科技互动研究方法主要包括：</p>
+<p>引文网络法：通过论文-专利互引关系建立关联（Meyer，2000），但专利引用动机的模糊性削弱其可靠性；<br />
+作者-发明人匹配法：基于学者多重身份识别科技互动（Breschi和Catalini，2010），受限于稀疏关联数据；<br />
+分类映射法：依托论文-专利分类体系构建关联（Han和Magee，2018），缺乏统一标准；<br />
+主题网络法：通过主题耦合揭示知识转化（Xu等，2019；Li等，2021），但主题粒度仍较粗放。<br />
+相较于传统方法，知识网络视角可通过细粒度知识元素（如关键词/实体）构建科技网络，精准捕捉知识流动轨迹。然而，如何实现网络拓扑结构的有效比较成为关键挑战。  </p>
+<p><strong>研究方法：</strong></p>
+<p>网络画像散度方法：通过将科技知识网络抽象为基于图不变概率分布的二维网络画像，并耦合画像散度与知识内容进行跨网络对比。具体而言，首先利用KeyBERT与词对齐算法对AI领域的科技知识进行提取与语义对齐；继而构建时序科技知识网络，并可视化生成两类网络画像——节点画像（表征节点度分布异质性）与连边权重画像（映射知识组合强度分布特征）；随后应用网络画像散度（一种基于信息论的网络相似性测度）计算科技画像的时变散度差异；最终通过多尺度主干网络分析，揭示科技系统内部的知识流动路径及其跨域动态交互模式</p>
+<p><img alt="网络画像散度-科技关联.png" src="../%E7%BD%91%E7%BB%9C%E7%94%BB%E5%83%8F%E6%95%A3%E5%BA%A6-%E7%A7%91%E6%8A%80%E5%85%B3%E8%81%94.png" /></p>
+<p><strong>结论：</strong> </p>
+<p>6.1 理论意义</p>
+<p>本研究对研究方法论和理论实践具有重要贡献。首先，我们通过知识网络表征科技知识体系，将科技关联关系的探测从"线性关系"推进到"网络关系"，克服了传统基于引用、共被引、词共现与主题方法的局限。其次，通过科技知识网络比对揭示知识网络间的知识传递与交互作用。我们改进了现有网络投影方法，提出基于k壳结构的网络节点投影与边权投影构建方法，创新性地引入网络画像距离计算方法。该画像距离能更细致刻画网络结构特征，为揭示科技知识体系内部结构提供新视角。最后，通过计算科技知识网络内部知识群落间的关联强度，结合科技时间关联图谱有效识别科技知识的传递路径、演化规律与交互模式。这种时序化的分析框架可以揭示知识行为的时域特征与领域特异性，为探测人工智能子领域发展提供方法支持。</p>
+<p>6.2 实践意义</p>
+<p>本研究框架与发现为决策者提供重要启示：第一，通过识别人工智能领域科技之间潜在的定向与结构关联，有助于挖掘具有发展潜力的人工智能子领域，加速科学知识向技术产品的转化。第二，我们提出的科技知识网络距离测算算法具有实践价值，可有效探测科技发展的领先-滞后关系。研究发现人工智能领域技术领先现象出现在早期（2000-2002；2004-2006），而科学领先则出现在中期（2010-2014）与近期（2018-2020）。这些发现可为政策调整提供依据，通过激发科技转化提升生产效能与技术进步（Dwivedi等，2021）。早期人工智能研究聚焦社交机器人（Peter &amp; Faith，2000）、工业机器人（Jones，2006）等技术突破，科学理论相对滞后。2006年达特茅斯人工智能会议通过与控制论、信息论、统计学等领域的协作，明确了人工智能发展方向（Moor，2006）。近期大型AI模型的出现引发发展瓶颈与存在性风险，有益人工智能会议通过制定通用人工智能风险应对政策，有效化解"AI伦理"问题（具体会议需核实）。把握科技发展的领先-滞后规律并实施差异化干预，有助于规避科技创新系统的风险（Fukuda，2020）。</p>
+<p>6.3 局限性与未来工作</p>
+<p>本研究存在以下局限：首先，知识网络构建仅基于标题与摘要关键词。虽然关键词能有效表征知识单元，但要全面理解人工智能科技关系，需要更具代表性的内容特征（如全文信息、段落关系等）（Li等，2021；Chen等，2023）。其次，尽管使用SpaCy库进行关键词对齐效果良好，但针对人工智能领域海量数据，未来可探索轻量级算法或词典库等实体对齐方法。再次，Web of Science（WOS）与美国专利商标局（USPTO）数据虽具有代表性，但可能遗漏非英语国家成果，未来应拓展多源异构数据。此外，关键词间存在共现、引用、语义等多层次关联关系，这些关系可能具有等价性或互补性，多链路融合方法有助于揭示系统间关联（Tseng &amp; Ting，2013；Han &amp; Magee，2018；Xu等，2019）。最后，本研究聚焦特定时间段，人工智能领域的动态交互可能更为复杂。未来可深入探究人工智能领域科技逐年交互规律，以及各子领域内部的交互趋势，从而更精细地把握其动态演化机制。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["instant", "navigation.tabs", "navigation.sections"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
